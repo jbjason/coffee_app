@@ -14,4 +14,35 @@ class MyConstant {
 
   static const hBackPrimary = Color(0xFFFAE6CD);
   static const hBodyBack = Color(0xFFFAF2E7);
+
+  static const boxShadow = [
+    BoxShadow(
+      color: MyConstant.wSplash,
+      blurRadius: 50,
+      spreadRadius: 5,
+      offset: Offset(-10, -25),
+    ),
+    BoxShadow(
+      color: Colors.black54,
+      blurRadius: 25,
+      spreadRadius: 3,
+      offset: Offset(10, 20),
+    ),
+  ];
+
+  static const categoryShadow = [
+    BoxShadow(
+      color: Colors.black38,
+      blurRadius: 10,
+      offset: Offset(2, 2),
+    ),
+    BoxShadow(
+      color: MyConstant.hBodyBack,
+      blurRadius: 15,
+      spreadRadius: 4,
+      offset: Offset(-5, -5),
+    ),
+  ];
+
+  static const categories = ["All", "Coffee", "New Products", "Upcoming"];
 }

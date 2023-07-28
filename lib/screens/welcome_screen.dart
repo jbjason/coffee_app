@@ -12,6 +12,7 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
+          // back gradient
           const Positioned.fill(
             child: DecoratedBox(
               decoration: BoxDecoration(
@@ -19,7 +20,8 @@ class WelcomeScreen extends StatelessWidget {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    MyConstant.wSplash,
+                    MyConstant.wBackThird,
+                    MyConstant.wBackSecondary,
                     MyConstant.wBackSecondary,
                     MyConstant.wBackThird,
                     MyConstant.wBackThird,

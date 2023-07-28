@@ -32,9 +32,9 @@ class WImage extends StatelessWidget {
           ),
         ),
         Positioned(
-          left: 5,
-          right: 0,
-          bottom: size.height * .14,
+          left: size.width * .05,
+          right: size.width * .03,
+          bottom: size.height * .16,
           height: size.height * .3,
           child: Transform(
             transform: Matrix4.identity()..rotateX(math.radians(36)),
@@ -44,8 +44,8 @@ class WImage extends StatelessWidget {
         // img
         Positioned(
           left: 0,
-          right: 0,
-          bottom: size.height * .15,
+          right: size.width * .03,
+          bottom: size.height * .155,
           child: Transform(
             alignment: Alignment.center,
             transform: Matrix4.identity() //..rotateX(math.radians(17)),
