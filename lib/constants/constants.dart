@@ -1,3 +1,4 @@
+import 'package:coffee_app/models/coffee_bean.dart';
 import 'package:flutter/material.dart';
 
 class MyConstant {
@@ -9,9 +10,7 @@ class MyConstant {
   static const wBackSecondary = Color(0xFF703307);
   static const wBackThird = Color(0xFF502407);
   static const wButtonBack = Color(0xFF612F0A);
-
   static const wSplash = Color(0xFFCF7124);
-
   static const hBackPrimary = Color(0xFFFAE6CD);
   static const hBodyBack = Color(0xFFFAF2E7);
 
@@ -45,4 +44,42 @@ class MyConstant {
   ];
 
   static const categories = ["All", "Coffee", "New Products", "Upcoming"];
+
+  final coffeeBeans = [
+    CoffeeBean(
+      title: 'Coffee Beans',
+      subtitle: 'We share our passion for Coffee.',
+      img: 'assets/images/coffee/coffee1.png',
+      price: 17.95,
+      isFavorite: false,
+    ),
+    CoffeeBean(
+      title: 'Peruvian Beans',
+      subtitle: 'We share our passion for Coffee.',
+      img: 'assets/images/coffee/coffee2.png',
+      price: 55.95,
+      isFavorite: true,
+    ),
+    CoffeeBean(
+      title: 'Arabica Beans',
+      subtitle: 'We share our passion for Coffee.',
+      img: 'assets/images/coffee/coffee3.png',
+      price: 17.95,
+      isFavorite: false,
+    ),
+    CoffeeBean(
+      title: 'Robusta Beans',
+      subtitle: 'We share our passion for Coffee.',
+      img: 'assets/images/coffee/coffee4.png',
+      price: 17.95,
+      isFavorite: true,
+    ),
+    CoffeeBean(
+      title: 'Excelsa  Beans',
+      subtitle: 'We share our passion for Coffee.',
+      img: 'assets/images/coffee/coffee5.png',
+      price: 17.95,
+      isFavorite: true,
+    ),
+  ];
 }

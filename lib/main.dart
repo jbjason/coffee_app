@@ -1,5 +1,5 @@
 import 'package:coffee_app/constants/constants.dart';
-import 'package:coffee_app/screens/home_screen.dart';
+import 'package:coffee_app/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
             primary: MyConstant.hBodyBack, seedColor: MyConstant.wBackPrimary),
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }

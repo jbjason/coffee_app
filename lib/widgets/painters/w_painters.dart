@@ -1,7 +1,7 @@
-import 'package:coffee_app/constants/constants.dart';
-import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:vector_math/vector_math_64.dart' as math;
+import 'package:coffee_app/constants/constants.dart';
+import 'package:flutter/material.dart';
 
 class WCupPainter extends CustomPainter {
   @override

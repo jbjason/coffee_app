@@ -1,5 +1,5 @@
 import 'package:coffee_app/constants/constants.dart';
-import 'package:coffee_app/widgets/welcome_widgets/w_cup_painter.dart';
+import 'package:coffee_app/widgets/painters/w_painters.dart';
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:vector_math/vector_math_64.dart' as math;
