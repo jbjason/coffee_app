@@ -45,6 +45,7 @@ class HNavPainter extends CustomPainter {
   HNavPainter({required this.isSelected});
   @override
   void paint(Canvas canvas, Size size) {
+    if (!isSelected) return;
     final h = size.height, w = size.width;
     final center = Offset((w / 2), (h * .75) - 3);
     final paint = Paint()..color = MyConstant.wSplash;
