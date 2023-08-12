@@ -16,13 +16,10 @@ class HomeScreen extends StatelessWidget {
         children: [
           Positioned.fill(
             bottom: size.height * .06,
-            child: ClipPath(
-              clipper: HBodyClipper(),
-              child: Container(color: MyConstant.hBackPrimary),
-            ),
+            child: CustomPaint(painter: HBodyPainter()),
           ),
           // body
-          const Padding(padding: EdgeInsets.all(20.0), child: HBody()),
+          const HBody(),
           // navBar
           const Positioned(left: 0, right: 0, bottom: 0, child: HNavBar()),
         ],

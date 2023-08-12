@@ -22,12 +22,25 @@ class HProductList extends StatelessWidget {
             children: [
               Positioned.fill(
                 top: size.height * .1,
-                right: 15,
+                right: 25,
                 child: Container(
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     color: MyConstant.hBodyBack,
                     borderRadius: BorderRadius.circular(17),
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 20,
+                        color: MyConstant.wBackPrimary.withOpacity(.3),
+                        offset: const Offset(-5, -2),
+                      ),
+                      const BoxShadow(
+                        spreadRadius: 1,
+                        blurRadius: 20,
+                        color: MyConstant.hBodyBack,
+                        offset: Offset(2, 2),
+                      ),
+                    ],
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,14 +85,27 @@ class HProductList extends StatelessWidget {
                 ),
               ),
               Positioned(
-                bottom: -15,
-                left: (size.width * .35) - 15,
+                bottom: -25,
+                left: (size.width * .3) - 15,
                 child: Container(
-                  height: 30,
-                  width: 30,
-                  decoration: const BoxDecoration(
+                  height: 40,
+                  width: 40,
+                  decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: MyConstant.wBackThird,
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 20,
+                        color: MyConstant.wBackPrimary.withOpacity(.6),
+                        offset: const Offset(2, 2),
+                      ),
+                      const BoxShadow(
+                        spreadRadius: 1,
+                        blurRadius: 20,
+                        color: MyConstant.hBodyBack,
+                        offset: Offset(-2, -2),
+                      ),
+                    ],
                   ),
                   child: const Icon(Icons.add, color: MyConstant.hBackPrimary),
                 ),

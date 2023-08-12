@@ -15,6 +15,7 @@ class _HCategoryListState extends State<HCategoryList> {
   Widget build(BuildContext context) {
     return Row(
       children: [
+        // category list
         Expanded(
           child: SizedBox(
             height: 60,
@@ -37,7 +38,7 @@ class _HCategoryListState extends State<HCategoryList> {
                                 const EdgeInsets.only(right: 10, bottom: 17),
                             padding: const EdgeInsets.symmetric(horizontal: 30),
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30),
+                              borderRadius: BorderRadius.circular(8),
                               color: isSelcted
                                   ? MyConstant.hBodyBack
                                   : Colors.transparent,
@@ -66,16 +67,34 @@ class _HCategoryListState extends State<HCategoryList> {
             ),
           ),
         ),
+        // settings icon
         Container(
-          width: 60,
-          height: 60,
-          padding: const EdgeInsets.all(10),
-          margin: const EdgeInsets.only(left: 20, bottom: 17),
-          decoration: const BoxDecoration(
-            shape: BoxShape.circle,
-            color: MyConstant.hBodyBack,
+          width: 80,
+          height: 80,
+          color: MyConstant.hBackPrimary,
+          child: Container(
+            padding: const EdgeInsets.all(10),
+            margin: const EdgeInsets.only(left: 20, bottom: 17),
+            constraints: const BoxConstraints.expand(),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: MyConstant.hBodyBack,
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 20,
+                  color: MyConstant.wBackPrimary.withOpacity(.3),
+                  offset: const Offset(-5, -2),
+                ),
+                const BoxShadow(
+                  spreadRadius: 1,
+                  blurRadius: 20,
+                  color: MyConstant.hBodyBack,
+                  offset: Offset(2, 2),
+                ),
+              ],
+            ),
+            child: Image.asset('assets/icons/settings.png'),
           ),
-          child: Image.asset('assets/icons/settings.png'),
         ),
       ],
     );

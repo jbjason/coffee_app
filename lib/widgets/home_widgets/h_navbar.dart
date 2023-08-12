@@ -43,16 +43,17 @@ class HNavBar extends StatelessWidget {
         clipBehavior: Clip.none,
         children: [
           Positioned(
-            top: -30,
-            left: (width * .3),
-            height: width * .4,
-            width: width * .4,
+            top: -(width * .32),
+            height: 100,
+            left: width * .25,
+            right: width * .25,
+            // left: (width * .3),
+            // height: width * .4,
+            // width: width * .4,
             child: Container(
-              height: 60,
-              width: 150,
               padding: const EdgeInsets.all(1.2),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(32),
+                shape: BoxShape.circle,
                 gradient: SweepGradient(
                   colors: [
                     MyConstant.hBodyBack.withOpacity(.1),
@@ -60,8 +61,8 @@ class HNavBar extends StatelessWidget {
                     MyConstant.wBackThird,
                     MyConstant.wBackThird,
                     MyConstant.wBackSecondary,
-                    MyConstant.wBackThird,
-                    MyConstant.wBackSecondary,
+                    MyConstant.hBodyBack.withOpacity(.1),
+                    MyConstant.hBodyBack.withOpacity(.1),
                   ],
                 ),
                 boxShadow: MyConstant.boxShadow,
@@ -69,8 +70,8 @@ class HNavBar extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.all(5),
                 constraints: const BoxConstraints.expand(),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
                   color: MyConstant.wBackThird,
                 ),
                 child: Image.asset('assets/icons/cart.png'),

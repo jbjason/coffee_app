@@ -1,6 +1,26 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:coffee_app/constants/constants.dart';
+
+class HBodyPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final w = size.width, h = size.height;
+    final path = Path();
+    path.lineTo(0, h - 30);
+    path.quadraticBezierTo(w * .2, h, w * .37, h);
+    path.cubicTo(w * .37, h * .915, w * .615, h * .915, w * .63, h);
+    path.quadraticBezierTo(w * .75, h, w, h - 30);
+    path.lineTo(w, 0);
+    path.close();
+
+    final paint = Paint()..color = MyConstant.hBackPrimary;
+    canvas.drawPath(path, paint);
+    //canvas.drawShadow(path, MyConstant.wBackThird, 10, true);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+}
 
 class HCategoryPainter extends CustomPainter {
   final bool selectedIndex;
@@ -20,24 +40,6 @@ class HCategoryPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
-}
-
-class HBodyClipper extends CustomClipper<Path> {
-  @override
-  getClip(Size size) {
-    final w = size.width, h = size.height;
-    final path = Path();
-    path.lineTo(0, h - 30);
-    path.quadraticBezierTo(w * .2, h, w * .4, h);
-    path.cubicTo(w * .4, h * .915, w * .6, h * .915, w * .6, h);
-    path.quadraticBezierTo(w * .75, h, w, h - 30);
-    path.lineTo(w, 0);
-    path.close();
-    return path;
-  }
-
-  @override
-  bool shouldReclip(covariant CustomClipper oldClipper) => false;
 }
 
 class HNavPainter extends CustomPainter {
