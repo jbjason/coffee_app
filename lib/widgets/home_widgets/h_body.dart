@@ -30,17 +30,21 @@ class HBody extends StatelessWidget {
                 Image.asset('assets/icons/search.png', height: 45),
               ],
             ),
-            const SizedBox(height: 20),
             // hi jubayer text
             RichText(
               text: const TextSpan(
-                text: 'Hi, ',
-                style: TextStyle(fontSize: 24, color: MyConstant.wBackThird),
+                text: 'Hii, ',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: MyConstant.wBackThird,
+                  fontFamily: MyConstant.font2,
+                ),
                 children: [
                   TextSpan(
                     text: 'Jubayer',
                     style: TextStyle(
                       fontSize: 24,
+                      fontFamily: MyConstant.font2,
                       color: MyConstant.wBackThird,
                       fontWeight: FontWeight.bold,
                     ),
@@ -48,7 +52,6 @@ class HBody extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 20),
             // categories
             const HCategoryList(),
             // product list

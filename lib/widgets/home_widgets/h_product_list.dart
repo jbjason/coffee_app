@@ -50,6 +50,7 @@ class HProductList extends StatelessWidget {
                       Text(
                         coffeBeans[i].title,
                         style: const TextStyle(
+                          fontFamily: MyConstant.font3,
                           fontSize: 17,
                           color: MyConstant.wBackThird,
                         ),
@@ -64,7 +65,7 @@ class HProductList extends StatelessWidget {
                           letterSpacing: 1.3,
                         ),
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 10),
                       // price & favorite-icon
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -73,6 +74,7 @@ class HProductList extends StatelessWidget {
                             '\$ ${coffeBeans[i].price}',
                             style: const TextStyle(
                               fontSize: 20,
+                              fontFamily: MyConstant.font3,
                               color: MyConstant.wBackThird,
                             ),
                           ),

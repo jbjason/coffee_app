@@ -51,6 +51,7 @@ class _HCategoryListState extends State<HCategoryList> {
                                 style: TextStyle(
                                   fontSize: 13,
                                   letterSpacing: 1.3,
+                                  fontFamily: MyConstant.font3,
                                   fontWeight: isSelcted
                                       ? FontWeight.bold
                                       : FontWeight.normal,
